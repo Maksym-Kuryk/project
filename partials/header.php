@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="assets/css/owl.css">
     <link rel="stylesheet" href="assets/css/animate.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
-    s
+    
 <!--
 
 TemplateMo 574 Mexant
@@ -41,7 +41,7 @@ https://templatemo.com/tm-574-mexant
               <div class="col-12">
                   <nav class="main-nav">
                       <!-- ***** Logo Start ***** -->
-                      <a href="index.html" class="logo">
+                      <a href="index.php" class="logo">
                           <img src="assets/images/logo.png" alt="">
                       </a>
                       <!-- ***** Logo End ***** -->
