@@ -17,10 +17,10 @@
                   <p>Mexant HTML5 Template is provided for free of charge. This layout is based on Boostrap 5 CSS framework. Anyone can download and edit for any professional website. Thank you for visiting TemplateMo website.</p>
                   <div class="buttons">
                     <div class="green-button">
-                      <a href="#">Discover More</a>
+                      <a href="https://futuramo.com/blog/6-simple-steps-to-upgrade-your-business/">Discover More</a>
                     </div>
                     <div class="orange-button">
-                      <a href="#">Contact Us</a>
+                      <a href="contact-us.php">Contact Us</a>
                     </div>
                   </div>
                 </div>
@@ -40,10 +40,10 @@
                   <p>You will see a bunch of free CSS templates when you search on Google. TemplateMo website is probably the best one because it is 100% free. It does not ask you anything in return. You have a total freedom to use any template for any purpose.</p>
                   <div class="buttons">
                     <div class="green-button">
-                      <a href="#">Discover More</a>
+                      <a href="https://www.ecb.europa.eu/euro/digital_euro/html/index.en.html">Discover More</a>
                     </div>
                     <div class="orange-button">
-                      <a href="#">Contact Us</a>
+                      <a href="contact-us.php">Contact Us</a>
                     </div>
                   </div>
                 </div>
@@ -63,10 +63,10 @@
                   <p>When you browse through different tags on TemplateMo website, you can see a variety of CSS templates which are responsive website designs for different individual needs. Please tell your friends about our website. Thank you.</p>
                   <div class="buttons">
                     <div class="green-button">
-                      <a href="#">Discover More</a>
+                      <a href="https://bit2me.com/buy-amp">Discover More</a>
                     </div>
                     <div class="orange-button">
-                      <a href="#">Contact Us</a>
+                      <a href="contact-us.php">Contact Us</a>
                     </div>
                   </div>
                 </div>
@@ -306,6 +306,27 @@
             <h6>Your Freedom</h6>
             <h4>Get a Financial Plan</h4>
           </div>
+          <?php
+                if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET['name']) && isset($_GET['email'])) {
+                    $name = htmlspecialchars($_GET['name']);
+                    $email = htmlspecialchars($_GET['email']);
+                    $subject = htmlspecialchars($_GET['subject'] ?? '');
+                    $category = htmlspecialchars($_GET['Category'] ?? '');
+
+                    if (!empty($name) && !empty($email)) {
+                        echo "<div style='text-align: center; margin-top: 50px; padding: 20px; background: rgba(255, 255, 255, 0.8); border-radius: 10px;'>
+                                <h2>Ďakujeme, <strong>$name</strong>!</h2>
+                                <p>Vaša žiadosť bola úspešne odoslaná.</p>
+                                <button onclick='window.history.back();' style='padding: 10px 20px; background-color: #ff6600; color: white; border: none; cursor: pointer; font-size: 16px;'>
+                                    Späť
+                                </button>
+                              </div>";
+                        exit;
+                    } else {
+                        echo "<p style='color: red; text-align: center;'>Vyplňte všetky povinné polia!</p>";
+                    }
+                }
+          ?>
           <form id="calculate" action="" method="get">
             <div class="row">
               <div class="col-lg-6">
